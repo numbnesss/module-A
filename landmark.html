@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Открой Оренбуржье - Достопримечательность</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.svg" alt="Открой Оренбуржье" id="logo"></a>
+
+        <input type="checkbox" id="burger-toggle" class="burger-toggle">
+        <label for="burger-toggle" class="burger"><span></span></label>
+
+        <nav id="main-nav">
+            <a href="index.html#search-section" id="go-to-search">Поиск достопримечательностей </a>
+            <a href="profile.html" id="nav-profile">Личный кабинет</a>
+            <a href="catalog.html" id="nav-catalog">Каталог достопримечательностей</a>
+
+            <a href="login.html" id="nav-login">Войти</a>
+            <a href="register.html" id="nav-register">Регистрация</a>
+        </nav>
+    </header>
+
+
+    <main id="landmark-page">
+        <h1 id="landmark-name">Караван-Сарай</h1>
+
+        <div id="landmark-slider">
+            <input type="radio" name="landmark-slider" id="photo-1" class="slider-radio" checked>
+            <input type="radio" name="landmark-slider" id="photo-2" class="slider-radio">
+            <input type="radio" name="landmark-slider" id="photo-3" class="slider-radio">
+
+            <div class="slider-track">
+                <div class="slider-slide">
+                    <img src="img/landmarks/karavan-saray-1.webp" alt="Караван-Сарай: вид на мечеть">
+                </div>
+                <div class="slider-slide">
+                    <img src="img/landmarks/karavan-saray-2.webp" alt="Караван-Сарай: внутренний двор">
+                </div>
+                <div class="slider-slide">
+                    <img src="img/landmarks/karavan-saray-3.webp" alt="Караван-Сарай: минарет">
+                </div>
+            </div>
+
+            <div class="slider-thumbs">
+                <label for="photo-1"><img src="img/landmarks/karavan-saray-1.webp" alt="Фото 1"></label>
+                <label for="photo-2"><img src="img/landmarks/karavan-saray-2.webp" alt="Фото 2"></label>
+                <label for="photo-3"><img src="img/landmarks/karavan-saray-3.webp" alt="Фото 3"></label>
+            </div>
+        </div>
+
+        <div id="landmark-desc">
+            <h2>Описание</h2>
+            <p>Караван-Сарай — архитектурный ансамбль, построенный в 1837–1846 годах по проекту архитектора
+                Александра Брюллова. Изначально здание служило гостиным двором и резиденцией для башкирского войска,
+                а также местом остановки торговых караванов, шедших из Средней Азии.</p>
+            <p>В центре ансамбля стоит мечеть с бирюзовым куполом и высоким минаретом, которая стала одним из
+                символов Оренбурга. Подковообразное здание окружает внутренний двор и образует единую композицию
+                с мечетью.</p>
+            <p>Сегодня Караван-Сарай — объект культурного наследия федерального значения. Здесь проходят экскурсии,
+                а мечеть открыта для посетителей.</p>
+        </div>
+
+        <div class="landmark-meta">
+            <p id="landmark-cat">Категория: Памятник архитектуры</p>
+            <p id="landmark-region">Район: г. Оренбург</p>
+            <p id="landmark-coords">Координаты: 51.76°&nbsp;с.&nbsp;ш.,
+                55.10°&nbsp;в.&nbsp;д.</p>
+        </div>
+
+
+        <section id="landmark-info" class="landmark-section">
+            <h2>Справочная информация</h2>
+            <dl class="landmark-info-list">
+                <dt>Режим работы</dt>
+                <dd>Ежедневно с 9:00 до 18:00</dd>
+                <dt>Стоимость посещения</dt>
+                <dd>Вход свободный, экскурсия — 300 ₽</dd>
+                <dt>Адрес</dt>
+                <dd>г. Оренбург, ул. Постникова, 1</dd>
+                <dt>Как добраться</dt>
+                <dd>10 минут пешком от Набережной</dd>
+            </dl>
+        </section>
+
+        <section id="landmark-comments" class="landmark-section">
+            <h2>Комментарии</h2>
+
+            <article class="comment">
+                <h3 class="comment-author">Ольга К.</h3>
+                <time class="comment-date" datetime="2026-09-12">12.09.2026</time>
+                <p class="comment-text">Очень красивое место, особенно вечером, когда включают подсветку.
+                    Обязательно поднимитесь к минарету!</p>
+            </article>
+
+            <article class="comment">
+                <h3 class="comment-author">Игорь Н.</h3>
+                <time class="comment-date" datetime="2026-08-28">28.08.2026</time>
+                <p class="comment-text">Были с детьми на экскурсии, гид интересно рассказал про историю караванов.
+                    Рекомендую.</p>
+            </article>
+
+            <article class="comment">
+                <h3 class="comment-author">Татьяна Р.</h3>
+                <time class="comment-date" datetime="2026-08-03">03.08.2026</time>
+                <p class="comment-text">Отличное место для фотографий. Лучшие кадры получаются утром, пока мало
+                    людей.</p>
+            </article>
+        </section>
+
+        <section class="correction-section">
+            <form id="correction-form" action="landmark.html">
+                <div class="correction-form-header">
+                    <img src="img/icons/pencil.svg" alt="">
+                    <h2>Предложить исправление</h2>
+                </div>
+                <div class="form-field">
+                    <label for="correction-name">Имя пользователя</label>
+                    <input type="text" id="correction-name" name="name" placeholder="Иван" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="correction-email">Почта</label>
+                    <input type="email" id="correction-email" name="email" placeholder="example@gmail.com" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="correction-type">Тип исправления</label>
+                    <select id="correction-type" name="type" required>
+                        <option value="">Выберите тип исправления</option>
+                        <option value="description">Неточность в описании</option>
+                        <option value="outdated">Устаревшие данные</option>
+                        <option value="coords">Некорректные координаты</option>
+                        <option value="photo">Некачественное фото</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="correction-text">Описание исправления</label>
+                    <textarea id="correction-text" name="text" rows="5" placeholder="Опишите, что нужно исправить"
+                        required></textarea>
+                </div>
+
+
+                <div class="form-field">
+                    <label for="correction-file">Подтверждающее фото</label>
+                    <input type="file" id="correction-file" name="file" accept="image/*">
+                </div>
+
+                <div class="form-field form-field-checkbox">
+                    <input type="checkbox" id="correction-consent" name="consent" required>
+                    <label for="correction-consent">Согласен на обработку персональных данных</label>
+                </div>
+
+                <button type="submit" id="correction-submit" class="btn">Отправить</button>
+            </form>
+        </section>
+
+    </main>
+
+
+    <footer id="footer">
+        <a href="tel:88007654321">Телефон: 8-800-765-43-21</a>
+        <a href="mailto:info@orenlandmarks.ru">E-mail: info@orenlandmarks.ru</a>
+
+        <nav class="nav-footer">
+            <a href="index.html">Главная</a>
+            <a href="login.html">Вход</a>
+            <a href="register.html">Регистрация</a>
+            <a href="profile.html">Личный кабинет</a>
+            <a href="catalog.html">Каталог достопримечательностей</a>
+            <a href="landmark.html">Страница достопримечательности</a>
+            <a href="admin.html">Административная панель</a>
+            <a href="index_dark.html">Главная - тёмная тема</a>
+        </nav>
+    </footer>
+</body>
+
+</html>

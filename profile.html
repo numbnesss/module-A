@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Открой Оренбуржье - Личный кабинет</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.svg" alt="Открой Оренбуржье" id="logo"></a>
+
+        <input type="checkbox" id="burger-toggle" class="burger-toggle">
+        <label for="burger-toggle" class="burger"><span></span></label>
+
+        <nav id="main-nav">
+            <a href="index.html#search-section" id="go-to-search">Поиск достопримечательностей </a>
+            <a href="profile.html" id="nav-profile">Личный кабинет</a>
+            <a href="catalog.html" id="nav-catalog">Каталог достопримечательностей</a>
+
+            <a href="index.html" id="nav-logout">Выйти</a>
+        </nav>
+    </header>
+
+
+    <main id="profile-page">
+        <h1>Личный кабинет</h1>
+        <section id="user-info">
+            <h2>Информация о пользователе</h2>
+
+            <dl>
+                <dt>E-mail</dt>
+                <dd>davydon@gmail.com</dd>
+
+                <dt>Имя</dt>
+                <dd>Тимур</dd>
+
+                <dt>Фамилия</dt>
+                <dd>Давыдов</dd>
+
+                <dt>Дата рождения</dt>
+                <dd>08.03.2002</dd>
+
+                <dt>Телефон</dt>
+                <dd><a href="tel:+79123456789">+7 (912) 345-67-89</a></dd>
+            </dl>
+        </section>
+
+        <section id="my-landmarks">
+            <h2>Мои достопримечательности</h2>
+
+
+            <article class="my-landmark-card">
+                <h3>Бузулукский бор</h3>
+                <p class="my-landmark-status approved">Одобрена</p>
+                <p class="my-landmark-date">Дата добавления: 15.06.2026</p>
+                <a href="profile.html#add-landmark-form" class="btn">Редактировать</a>
+            </article>
+
+            <article class="my-landmark-card">
+                <h3>Гора Шайтан-тау</h3>
+                <p class="my-landmark-status pending">На проверке</p>
+                <p class="my-landmark-date">Дата добавления: 02.10.2026</p>
+                <a href="profile.html#add-landmark-form" class="btn">Редактировать</a>
+            </article>
+
+            <article class="my-landmark-card">
+                <h3>Бузулукский бор</h3>
+                <p class="my-landmark-status rejected">Отклонена</p>
+                <p class="my-landmark-date">Дата добавления: 21.09.2026</p>
+                <a href="profile.html#add-landmark-form" class="btn">Редактировать</a>
+            </article>
+        </section>
+
+
+        <section>
+            <h2>Добавить достопримечательность</h2>
+
+            <form id="add-landmark-form" action="profile.html">
+
+                <div class="form-field">
+                    <label for="landmark-title">Название</label>
+                    <input type="text" id="landmark-title" name="title" placeholder="Например: Караван-Сарай" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="landmark-category">Категория</label>
+                    <select id="landmark-category" name="category" required>
+                        <option value="">Выберите категорию</option>
+                        <option value="architecture">Памятник архитектуры</option>
+                        <option value="nature">Природный объект</option>
+                        <option value="museum">Музей</option>
+                        <option value="history">Историческое место</option>
+                        <option value="religion">Религиозное сооружение</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="landmark-district">Район Оренбургской области *</label>
+                    <select id="landmark-district" name="district" required>
+                        <option value="">Выберите район</option>
+                        <option value="orenburg">г. Оренбург</option>
+                        <option value="orsk">г. Орск</option>
+                        <option value="buzuluk">Бузулукский</option>
+                        <option value="gay">Гайский</option>
+                        <option value="kuvandyk">Кувандыкский</option>
+                        <option value="orenburgsky">Оренбургский</option>
+                        <option value="saraktash">Саракташский</option>
+                        <option value="sol-iletsk">Соль-Илецкий</option>
+                        <option value="other">Другой район</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="landmark-description">Описание</label>
+                    <textarea id="landmark-description" name="description" rows="5"
+                        placeholder="Расскажите, чем интересно это место" required></textarea>
+                </div>
+
+                <div class="form-field">
+                    <label for="landmark-lat">Широта</label>
+                    <input type="number" id="landmark-lat" name="lat" placeholder="51.76" step="0.000001" min="-90"
+                        max="90" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="landmark-lng">Долгота</label>
+                    <input type="number" id="landmark-lng" name="lng" placeholder="55.10" step="0.000001" min="-180"
+                        max="180" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="landmark-images">Фотографии</label>
+                    <input type="file" id="landmark-images" name="images" accept="image/*" multiple required>
+                </div>
+
+                <button type="submit" id="landmark-submit" class="btn">Отправить на модерацию</button>
+            </form>
+        </section>
+
+        <section id="profile-settings">
+            <h2>Настройки</h2>
+            <button type="button" class="btn" id="change-password-btn">Сменить пароль</button>
+            <div class="switch-theme">
+                <input type="checkbox" id="theme-toggle">
+                <label for="theme-toggle">Темная тема</label>
+            </div>
+        </section>
+    </main>
+
+
+    <footer id="footer">
+        <a href="tel:88007654321">Телефон: 8-800-765-43-21</a>
+        <a href="mailto:info@orenlandmarks.ru">E-mail: info@orenlandmarks.ru</a>
+
+        <nav class="nav-footer">
+            <a href="index.html">Главная</a>
+            <a href="login.html">Вход</a>
+            <a href="register.html">Регистрация</a>
+            <a href="profile.html">Личный кабинет</a>
+            <a href="catalog.html">Каталог достопримечательностей</a>
+            <a href="landmark.html">Страница достопримечательности</a>
+            <a href="admin.html">Административная панель</a>
+            <a href="index_dark.html">Главная - тёмная тема</a>
+        </nav>
+    </footer>
+</body>
+
+</html>

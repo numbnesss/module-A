@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Открой Оренбуржье - Регистрация</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/print.css" media="print">
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.svg" alt="Открой Оренбуржье" id="logo"></a>
+
+        <input type="checkbox" id="burger-toggle" class="burger-toggle">
+        <label for="burger-toggle" class="burger"><span></span></label>
+
+        <nav id="main-nav">
+            <a href="index.html#search-section" id="go-to-search">Поиск достопримечательностей</a>
+            <a href="profile.html" id="nav-profile">Личный кабинет</a>
+            <a href="catalog.html" id="nav-catalog">Каталог достопримечательностей</a>
+
+            <a href="login.html" id="nav-login">Войти</a>
+            <a href="register.html" id="nav-register">Регистрация</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="reg-section">
+            <h1>Регистрация</h1>
+
+            <form id="register-form" action="profile.html">
+                <div class="form-field">
+                    <label for="reg-email">E-mail</label>
+                    <input type="email" name="email" id="reg-email" placeholder="example@mail.ru" required>
+
+                    <span class="form-message success">Успешно</span>
+                    <span class="form-message error">Введите корректный e-mail</span>
+                    <span class="form-message empty">Обязательное поле</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="reg-lastname">Фамилия</label>
+                    <input type="text" name="lastname" id="reg-lastname" placeholder="Иванов"
+                        pattern="[А-ЯЁа-яё\-]{2,30}" required>
+
+                    <span class="form-message success">Успешно</span>
+                    <span class="form-message error">Используйте только кириллицу, от 2 до 30 символов</span>
+                    <span class="form-message empty">Обязательное поле</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="reg-firstname">Имя</label>
+                    <input type="text" name="firstname" id="reg-firstname" placeholder="Иван"
+                        pattern="[А-ЯЁа-яё\-]{2,30}" required>
+
+                    <span class="form-message success">Успешно</span>
+                    <span class="form-message error">Используйте только кириллицу, от 2 до 30 символов</span>
+                    <span class="form-message empty">Обязательное поле</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="reg-birthdate">Дата рождения</label>
+                    <input type="date" name="birthdate" id="reg-birthdate" min="1920-01-01" max="2010-12-31">
+
+                    <span class="form-message success">Успешно</span>
+                    <span class="form-message error">Платформа доступна с 16 лет</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="reg-phone">Телефон</label>
+                    <input type="tel" name="phone" id="reg-phone" placeholder="+7 (912) 345-67-89"
+                        pattern="\+7\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}">
+
+                    <span class="form-message success">Успешно</span>
+                    <span class="form-message error">Введите номер в формате +7 (912) 345-67-89</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="reg-password">Пароль</label>
+                    <input type="password" name="password" id="reg-password" placeholder="Не менее 8 символов"
+                        minlength="8" required>
+
+                    <span class="form-message success">Успешно</span>
+                    <span class="form-message error">Пароль должен содержать не менее 8 символов</span>
+                    <span class="form-message empty">Обязательное поле</span>
+                </div>
+
+                <div class="form-field">
+                    <label for="reg-password-confirm">Повторите пароль</label>
+                    <input type="password" name="password-confirm" id="reg-password-confirm"
+                        placeholder="Повторите пароль" minlength="8" required>
+
+                    <span class="form-message success">Успешно</span>
+                    <span class="form-message error">Пароль должен содержать не менее 8 символов</span>
+                    <span class="form-message empty">Обязательное поле</span>
+                </div>
+
+                <div class="form-field form-field-checkbox">
+                    <input type="checkbox" id="reg-consent" name="consent" required>
+                    <label for="reg-consent">Согласен на обработку персональных данных</label>
+                    <span class="form-message empty">Необходимо согласие на обработку персональных данных</span>
+                </div>
+
+                <button type="submit" id="reg-submit" class="btn">Зарегистрироваться</button>
+            </form>
+        </section>
+    </main>
+
+
+    <footer id="footer">
+        <a href="tel:88007654321">Телефон: 8-800-765-43-21</a>
+        <a href="mailto:info@orenlandmarks.ru">E-mail: info@orenlandmarks.ru</a>
+
+        <nav class="nav-footer">
+            <a href="index.html">Главная</a>
+            <a href="login.html">Вход</a>
+            <a href="register.html">Регистрация</a>
+            <a href="profile.html">Личный кабинет</a>
+            <a href="catalog.html">Каталог достопримечательностей</a>
+            <a href="landmark.html">Страница достопримечательности</a>
+            <a href="admin.html">Административная панель</a>
+            <a href="index_dark.html">Главная - тёмная тема</a>
+        </nav>
+    </footer>
+</body>
+
+</html>

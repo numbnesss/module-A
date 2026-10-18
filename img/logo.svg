@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="56" viewBox="0 0 220 56">
+  <circle cx="28" cy="28" r="26" fill="#C2672D"/>
+  <path d="M8 38 L20 24 L28 32 L36 20 L48 38 Z" fill="#FAF6F0"/>
+  <circle cx="38" cy="15" r="4" fill="#F2B33D"/>
+  <text x="62" y="25" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#2F5D50">Открой</text>
+  <text x="62" y="45" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#C2672D">Оренбуржье</text>
+</svg>
